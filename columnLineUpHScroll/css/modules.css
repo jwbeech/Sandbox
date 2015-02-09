@@ -1,0 +1,541 @@
+/*---------------------------------------------+
+| GLOBAL / REUSEABLE				           |
++---------------------------------------------*/
+.buttonSpaced{
+	margin: 10px 0;
+}
+.buttonSpaced2{
+    margin: 3px 6px;
+}
+.moduleFullPadder{
+	padding: 0 15px;
+}
+.moduleHeaderMargin{
+    margin-top: 40px;
+}
+.moduleComponentMarginTop {
+    margin-top:10px;
+}
+.moduleComponentMarginBottom {
+    margin-bottom:10px;
+}
+
+.moduleSearchButtons {
+	padding-top: 10px;
+}
+.moduleSearchButtons button{
+	float: right;
+	margin-left: 10px;
+}
+
+.disableOverlayParent{
+	position: relative;
+}
+
+.disableOverlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background: url("../images/workbox/tabBgTransparent.png") repeat;
+	width: 100%;
+	height: 100%;
+}
+
+.blueBorder{
+	border-color: #0000cc;
+}
+.fullPreloader{
+	height: 60px;
+	position: relative;
+}
+.fullPreloader img{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -12px 0 0 8px;
+}
+
+/*---------------------------------------------+
+| SUBMISSIONS						           |
++---------------------------------------------*/
+.headerTxt{
+	display: inline-block;
+}
+
+.headerDrop{
+	padding: 10px;
+	min-width: 320px;
+	position: absolute;
+}
+
+.headerDrop .readOnlyLabel{
+	width: 49% !important;
+	border: none !important;
+	box-shadow: none !important;
+	padding-left: 0px !important;
+}
+
+.headerDrop input[type=text]{
+	width: 49% !important;
+}
+
+
+/*---------------------------------------------+
+| PRODUCT							           |
++---------------------------------------------*/
+.matrixTable{ }
+.dataTables_scrollHeadInner .matrixTable.ffDataTable th {
+	padding: 2px 4px 2px 8px !important;
+	vertical-align: top;
+}
+table.matrixTable .headerText{
+	padding-top: 4px;
+	display: inline-block;
+}
+
+table.matrixTable td.termCell{
+	padding: 2px 6px 2px 6px !important;
+	min-width: 200px;
+}
+
+table.matrixTable .cellText{
+	padding-top: 3px;
+	display: inline-block;
+}
+
+a.matrixCellLink {
+	color: #333;
+}
+
+a.matrixCellInvalid{
+	color: #ff0000;
+}
+
+a.matrixCellLink:hover,
+a.matrixCellInvalid:hover {
+	color: #2a6496;
+	text-decoration: underline;
+}
+
+.productBandDetail{
+	color: #999;
+}
+.effectiveValue{
+	display: inline-block;
+}
+.matrixSliderHolder{
+	padding-left: 50%;
+	margin-bottom: 10px;
+}
+.matrixSlider{
+	margin: 0 12px 0 6px;
+}
+/*---------------------------------------------+
+| RECEIPTING							       |
++---------------------------------------------*/
+.receiptingFileBrowseBtn {
+    display: inline-block !important;
+    width: 49.5%;
+}
+.receiptingFileUploadBtn {
+    display: inline-block !important;
+    width: 49.5%;
+}
+
+/*---------------------------------------------+
+| FINANCIAL STATEMENT				           |
++---------------------------------------------*/
+.halfHolder{
+	width: 49.3%;
+	display: inline-block;
+}
+.financialStatement .addEmployerBtn{
+	margin-top: 0;
+	margin-bottom: 0;
+	float: right;
+}
+.statementHR{
+	margin: 0 0 10px 0;
+}
+.lineLabel{
+	position: relative;
+}
+.financialSign{
+	position: absolute;
+	font-weight: bold;
+	right: 0;
+}
+.inputWrapper{
+	display: inline-block;
+	width: 49.3%;
+	position: relative;
+}
+.adHocWeightedLine {
+	display: block;
+	width: 90% !important;
+	margin-right: 25px;
+}
+.inputWrapper button{
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 5px 5px 4px 5px;
+    margin-top: 3px;
+    height: 28px;
+}
+
+/*---------------------------------------------+
+| CHECKLISTS							       |
++---------------------------------------------*/
+.checklist .empty h3{
+	margin-bottom: 10px;
+}
+.checklist .empty p{
+	margin-bottom: 0;
+}
+.checklist h3{
+	margin-bottom: 30px;
+}
+.checklist hr{
+	margin: 15px 0;
+}
+.checklist .addBtn{
+	float: right;
+	margin: 15px 10px 0 0;
+}
+
+.checklistRow{
+	position: relative;
+}
+
+.checklistRow h4{
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: 0px;
+}
+
+.checklistRow .docIcon{
+	position: absolute;
+	top: 3px;
+	left: 19px;
+}
+
+.checklistRow .textHolder{
+	margin: 0 270px 0 64px;
+	/* min height for the image*/
+	min-height: 48px;
+}
+
+.checklistRow .textHolder p{
+	margin-bottom: 0;
+}
+
+.checklistRow .lineControls{
+	position: absolute;
+	top: 0;
+	right: 10px;
+	width: 260px;
+}
+
+.checklistRow .lineControls .browse,
+.checklistRow .lineControls .uploadWaiting,
+.checklistRow .lineControls .reuploadView,
+.checklistRow .lineControls .viewOnly{
+	float: right;
+	width: auto;
+	padding-top: 15px;
+}
+
+.checklistRow .lineControls .uploadWaiting a{
+	padding-right: 10px;
+}
+
+.progressOuter{
+	border: 1px solid #1775d5;
+	font-size: 14px;
+	line-height: 14px;
+}
+.progressInner{
+	background: #4aa8ff;
+	margin: 0;
+}
+
+/* customise */
+.checklistRow .lineControls .progressOuter{
+	margin: 24px 0 0 80px;
+}
+
+.checklistRow .lineControls .dropHere{
+	font-size: 18px;
+	text-align: center;
+	float: none;
+	margin: 2px 40px 0 40px;
+	padding: 8px 0;
+	border: 1px dashed #ff0000;
+}
+.checklistRow .lineControls .dropHere.over{
+	border: 1px solid green;
+}
+
+.checklistRow .lineControls .reuploadView,
+.checklistRow .lineControls .viewOnly{
+	padding: 24px 0 0 0;
+}
+
+.checklistRow .lineControls .approve img{
+	float: left;
+	margin-top: 26px;
+}
+.checklistRow .lineControls .approveWraper{
+	float: left;
+	padding: 22px 0 0 7px;
+}
+.checklistRow .lineControls .approve select{
+	display: none;
+	width: 134px;
+}
+
+.checklistRow .lineControls .approve input[type=radio]{
+	margin-top: 2px;
+}
+.checklistRow .lineControls .showReason .approveWraper{
+	padding-top: 0;
+}
+.checklistRow .lineControls .approve.showReason select{
+	display: block;
+}
+.checklistRow .lineControls .approve .approveReuploadView{
+	float: right;
+	padding: 24px 0 0 0;
+}
+.checklistRow .lineControls .hideReupload .reuploadLink,
+.checklistRow .lineControls .hideReupload .divider{
+	display: none;
+}
+.checklistRow .lineControls .hideReupload .approveWraper select {
+	width: 180px;
+}
+
+.checklistRow .required-indicator{
+	color: #ff0000;
+	font-size: 14px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.checklistRow .formholder{
+	padding-right: 10px;
+}
+
+/*---------------------------------------------+
+| EMPLOYERS								       |
++---------------------------------------------*/
+.treeDivider{
+	background-image: url("../images/treeDivider.gif");
+	background-repeat: no-repeat;
+}
+.divisionParentHeader {}
+.divisionParentHeader h3{
+	float: left;
+}
+.divisionParentHeader .checkbox-inline{
+	float: right;
+	padding: 10px 5px 0 0;
+}
+.divisionParentHeader button{
+	float: right;
+}
+
+/*---------------------------------------------+
+| LOAN MANAGEMENT						       |
++---------------------------------------------*/
+.threeColOverride{
+	padding-left: 0;
+	padding-right: 19px;
+}
+
+/*---------------------------------------------+
+| USERS								           |
++---------------------------------------------*/
+.doubleSelectBtnRight{
+	font-size: 10px;
+	padding: 3px 9px 4px 10px;
+}
+.doubleSelectBtnLeft{
+	font-size: 10px;
+	padding: 4px 10px 4px 9px;
+}
+
+/*---------------------------------------------+
+| ACCOUNTING PERIODS    			           |
++---------------------------------------------*/
+.showClosedCheckbox {
+    float: right;
+    padding-bottom: 10px;
+}
+
+
+/*---------------------------------------------+
+| EMPLOYER PERIODS    						   |
++---------------------------------------------*/
+.showClosedCheckboxInTitle {
+    float: right;
+    padding-top: 7px;
+}
+
+.employerPeriodsDateInput input.ff-form-std[type="text"],
+.employerPeriodsDateInput div.form-control {
+    width:35.5% !important;
+}
+.employerPeriodsDaysLeftLabel {
+    display: inline-block;
+    text-align: right;
+    width: 14%;
+    font-weight: normal;
+    padding-right: 7px;
+}
+
+
+
+/*---------------------------------------------+
+| ROLES								           |
++---------------------------------------------*/
+.categoryLabel{
+	padding: 0 10px 0 0;
+}
+.categoryCombo{
+	width: auto;
+	display: inline-block;
+}
+label.modulePermissionCheck{
+	display: block;
+	margin-bottom: 10px;
+}
+label.modulePermissionCheck input{
+	margin-top: 2px;
+}
+
+
+/*---------------------------------------------+
+| NOTIFICATIONS						           |
++---------------------------------------------*/
+.starHolder{
+	cursor: pointer;
+}
+.form-control.readOnlyLabel.messageArea{
+	width: 100%;
+	height: 200px;
+	overflow-y: auto;
+}
+.unreadRow{
+	font-weight: bold;
+}
+
+
+/*---------------------------------------------+
+| RECEIPTING						           |
++---------------------------------------------*/
+.receiptingAllocationArrow{
+	background-image: url("../images/receiptingAllocationArrow.gif");
+	width: 23px;
+	height: 10px;
+	margin-top: 5px;
+}
+
+
+.table-striped.table-double-lines > tbody > tr:nth-child(2n+1) {
+	background-color: transparent;
+}
+
+.reconciliationSummaryLabel {
+    display: inline-block;
+    max-width: 100%;
+    margin-top: 7px;
+    font-weight: normal;
+}
+
+.reconciliationSummaryLine{
+	text-align: right;
+}
+.reconSummary .form-control.readOnlyLabel{
+	width: 100%;
+}
+
+
+
+/*---------------------------------------------+
+| LOAN OFFER & QUOTE						   |
++---------------------------------------------*/
+.fee-tooltip{}
+.fee-tooltip.tooltip{
+}
+.fee-tooltip .tooltip-inner{
+	color: inherit;
+	padding: 0;
+	min-width: 370px;
+}
+.fee-tooltip .tooltip-inner th,
+.fee-tooltip .tooltip-inner td{
+	text-align: left;
+}
+.filter-menu{
+	min-width: 300px;
+}
+
+/*---------------------------------------------+
+| AUDIT LOG REPORT							   |
++---------------------------------------------*/
+tr.selectedAuditRow, tr.selectedAuditRow td, .table-striped > tbody > tr.selectedAuditRow:nth-child(2n+1) > td, .table-striped > tbody > tr.selectedAuditRow:nth-child(2n+1) > th{
+	/*background-color: #eeeeee !important;*/
+	background-color: #d9ddf2;
+}
+tr.selectedAuditRow td a{
+	color:#999999;
+}
+
+/*---------------------------------------------+
+| COLLECTIONS   							   |
++---------------------------------------------*/
+.contactClientBlockH3 h3 {
+    display: block;
+    margin-bottom: 30px;
+}
+
+
+/*---------------------------------------------+
+| Client Search								   |
++---------------------------------------------*/
+.clientSearchHolder input{
+	width: 100% !important;
+}
+
+.clientSearchHolder .searchDivider{
+	margin: 10px 0;
+}
+
+
+.clientSearchHolder .searchButtons button{
+	margin-right: 10px;
+}
+
+#clientSearchHolder .searchResults{
+	padding-top: 10px;
+}
+
+#clientSearchHolder .newClientBtn{
+	float: right;
+	margin: 0 !important;
+}
+
+#clientSearchHolder .newLoanBtn {
+	margin: 0 0 12px 30px;
+}
+
+/*---------------------------------------------+
+| Notification							       |
++---------------------------------------------*/
+.form-control.notificationSendMessage{
+	height: 150px;
+}

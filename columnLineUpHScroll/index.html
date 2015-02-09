@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Column Line Up H Scroll</title>
+
+
+
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+
+    <link rel="stylesheet" href="css/datatables.bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/dataTables.colReorder.css" type="text/css">
+    <link rel="stylesheet" href="css/dataTables.fixedColumns.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-modal-bs3patch.css" type="text/css">
+
+    <link rel="stylesheet" href="css/bootstrap-modal.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-multilevelmenu.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/select2.css" type="text/css">
+    <link rel="stylesheet" href="css/select2-bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery.fileupload.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.css">
+
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <!--<link rel="stylesheet" href="css/modules.css" type="text/css">-->
+
+    <script type="text/javascript" src="js/lib/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.utils.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.cookie.1.4.0.js"></script>
+    <script type="text/javascript" src="js/lib/moment.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.validate.js"></script>
+
+    <script type="text/javascript" src="js/ValidationCustomisations.js"></script>
+
+    <script type="text/javascript" src="js/lib/bootstrap.js"></script>
+
+    <script type="text/javascript" src="js/lib/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="js/lib/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="js/lib/bootstrap-modalmanager.js"></script>
+    <script type="text/javascript" src="js/lib/underscore.1.5.2.js"></script>
+    <script type="text/javascript" src="js/lib/underscore.mixin.js"></script>
+    <script type="text/javascript" src="js/lib/RootClass.js"></script>
+
+    <script type="text/javascript" src="js/lib/dataTables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="js/lib/dataTables/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" src="js/lib/dataTables/dataTables.colReorder.js"></script>
+    <script type="text/javascript" src="js/lib/dataTables/dataTables.fixedColumns.js"></script>
+    <script type="text/javascript" src="js/lib/dataTables/jquery.dataTables.rowReordering.js"></script>
+    <script type="text/javascript" src="js/lib/formatCurrency/jquery.formatCurrency-1.4.0.js"></script>
+    <script type="text/javascript" src="js/lib/formatCurrency/i18n/jquery.formatCurrency.en-ZA.js"></script>
+
+    <script type="text/javascript" src="js/lib/select2/select2.js"></script>
+
+    <script type="text/javascript" src="js/lib/jquery.fileupload.js"></script>
+
+    <script type="text/javascript" src="js/lib/big.js"></script>
+    <script type="text/javascript" src="js/lib/form2js.js"></script>
+
+    <script type="text/javascript" src="js/Global.js"></script>
+    <script type="text/javascript" src="js/Locale.js"></script>
+    <script type="text/javascript" src="js/Events.js"></script>
+    <script type="text/javascript" src="js/Sizes.js"></script>
+    <script type="text/javascript" src="js/shared/GlobalJSAjaxProxy.js"></script>
+    <script type="text/javascript" src="js/shared/PopupManager.js"></script>
+    <script type="text/javascript" src="js/shared/FormUtils.js"></script>
+    <script type="text/javascript" src="js/shared/URLPoster.js"></script>
+    <script type="text/javascript" src="js/shared/EventHandler.js"></script>
+    <script type="text/javascript" src="js/shared/FFDoubleSelectList.js"></script>
+    <script type="text/javascript" src="js/shared/URLBuilder.js"></script>
+    <script type="text/javascript" src="js/shared/UnitConverter.js"></script>
+    <script type="text/javascript" src="js/shared/EventFacade.js"></script>
+
+    <script type="text/javascript" src="js/shared/components/FormComponent.js"></script>
+    <script type="text/javascript" src="js/shared/components/FFButtonDropDownInput.js"></script>
+    <script type="text/javascript" src="js/shared/components/FFButtonInput.js"></script>
+    <script type="text/javascript" src="js/shared/components/FFCurrencyInput.js"></script>
+    <script type="text/javascript" src="js/shared/components/FFDateInput.js"></script>
+    <script type="text/javascript" src="js/shared/components/FFInput.js"></script>
+    <script type="text/javascript" src="js/shared/components/FFNumberInput.js"></script>
+    <script type="text/javascript" src="js/shared/components/FFPercentInput.js"></script>
+    <script type="text/javascript" src="js/shared/components/FFRestrictInput.js"></script>
+    <script type="text/javascript" src="js/shared/components/FFAutoPopulateInput.js"></script>
+    <script type="text/javascript" src="js/shared/components/FFPostingLink.js"></script>
+
+    <script type="text/javascript" src="js/shared/plugins/PluginBuilder.js"></script>
+    <script type="text/javascript" src="js/shared/plugins/FFDataLink.js"></script>
+    <script type="text/javascript" src="js/shared/plugins/FFDataTable.js"></script>
+    <script type="text/javascript" src="js/shared/plugins/FFFileUpload.js"></script>
+    <script type="text/javascript" src="js/shared/RuntimeURLManager.js"></script>
+    <script type="text/javascript" src="js/workbox/checklist/checklist.js"></script>
+
+    <script type="text/javascript" src="js/workbox/PreloadManager.js"></script>
+    <script type="text/javascript" src="js/workbox/TabCollectionManager.js"></script>
+    <script type="text/javascript" src="js/workbox/SubTabCollectionManager.js"></script>
+    <script type="text/javascript" src="js/workbox/ModuleRequestFramework.js"></script>
+    <script type="text/javascript" src="js/workbox/ComboManager.js"></script>
+    <script type="text/javascript" src="js/workbox/JobBagManager.js"></script>
+    <script type="text/javascript" src="js/workbox/OrganisationEmployerLinker.js"></script>
+
+    <script type="text/javascript" src="jsInit.js"></script>
+</head>
+
+<body>
+
+    <div id="mainHolder">
+        <table id="reviewTable"></table>
+    </div>
+
+    <script type="text/javascript">
+        $(function(){
+            var rows        = [{"cols_0":"","cols_1":"MR","cols_2":"Jonathan","cols_3":"Beech","cols_4":"861112347","cols_5":"564654654645","cols_6":"10/01/1986","cols_7":"SINGLE","cols_8":"true","cols_9":"MALE","cols_10":"5","cols_11":"Soldier","cols_12":"Bayport Rivonia","cols_13":"jon","cols_14":"Jonathan1","cols_15":"line 1","cols_16":"line 2","cols_17":"Postal","cols_18":"CapeTown","cols_19":"South Africa","cols_20":"5","cols_21":"7405","cols_22":"ZA_WESTERNCAPE","cols_23":"Complex","cols_24":"Boarder","cols_25":"Observatory CPT","cols_26":"Mobile","cols_27":"Home","cols_28":"jon@leftandright.co.za","cols_29":"jwbeech@gmail.com"},{"errorsURL":"/flexifin-web/systemDataImportReviewModule/renderPopupModules?id=3177","cols_0":"","cols_1":"MR","cols_2":"","cols_3":"Beech","cols_4":"","cols_5":"564654654645","cols_6":"10/01/1986","cols_7":"SINGLE","cols_8":"true","cols_9":"MALE","cols_10":"5","cols_11":"Soldier","cols_12":"Bayport Rivonia","cols_13":"jon","cols_14":"Jonathan1","cols_15":"line 1","cols_16":"line 2","cols_17":"Postal","cols_18":"CapeTown","cols_19":"South Africa","cols_20":"5","cols_21":"7405","cols_22":"ZA_WESTERNCAPE","cols_23":"Complex","cols_24":"Boarder","cols_25":"Observatory CPT","cols_26":"Mobile","cols_27":"Home","cols_28":"jon@leftandright.co.za","cols_29":"jwbeech@gmail.com"}];
+            var cols        = [{"title":"Errors","data":"cols_0","sortable":false},{"title":"Title","data":"cols_1","sortable":false},{"title":"First Name","data":"cols_2","sortable":false},{"title":"Last Name","data":"cols_3","sortable":false},{"title":"ID Number","data":"cols_4","sortable":false},{"title":"Passport Number","data":"cols_5","sortable":false},{"title":"Date Of Birth","data":"cols_6","sortable":false},{"title":"Marital Status","data":"cols_7","sortable":false},{"title":"Enabled","data":"cols_8","sortable":false},{"title":"Gender","data":"cols_9","sortable":false},{"title":"Dependants","data":"cols_10","sortable":false},{"title":"Job Position","data":"cols_11","sortable":false},{"title":"Outlet","data":"cols_12","sortable":false},{"title":"Username","data":"cols_13","sortable":false},{"title":"Password","data":"cols_14","sortable":false},{"title":"address1.addressLine1","data":"cols_15","sortable":false},{"title":"address1.addressLine2","data":"cols_16","sortable":false},{"title":"address1.addressType","data":"cols_17","sortable":false},{"title":"address1.city","data":"cols_18","sortable":false},{"title":"address1.country","data":"cols_19","sortable":false},{"title":"address1.monthsAtResidence","data":"cols_20","sortable":false},{"title":"address1.postalCode","data":"cols_21","sortable":false},{"title":"address1.region","data":"cols_22","sortable":false},{"title":"address1.residenceType","data":"cols_23","sortable":false},{"title":"address1.residentStatus","data":"cols_24","sortable":false},{"title":"address1.suburb","data":"cols_25","sortable":false},{"title":"contactNumber1.contactNumberType","data":"cols_26","sortable":false},{"title":"contactNumber2.contactNumberType","data":"cols_27","sortable":false},{"title":"emailAddress1.address","data":"cols_28","sortable":false},{"title":"emailAddress2.address","data":"cols_29","sortable":false}];
+
+            var reviewTable = $("#reviewTable").ffDataTable();
+            cols[0].render  = function(){
+                return "some long text value that is going to thro things out"
+            }
+            reviewTable.createTable({
+                rows            : rows,
+                cols            : cols,
+                minLines        : Sizes.CRUD_MAX_LINES,
+                maxHeightLines  : Sizes.CRUD_MAX_LINES,
+                sort            : false,
+                pagination      : true,
+                hscroll         : true
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+
+/*
+Fonts
+-------------------------------------------
+*/
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Open Sans'), local('OpenSans'), url(../fonts/opensans.woff) format('woff');
+}
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 600;
+	src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(../fonts/opensansbold.woff) format('woff');
+}
+
+
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+    font-size: 12px;
+		/*font-smooth: never;
+        -webkit-font-smoothing : none;*/
+}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+	/*font-smooth: never;
+	-webkit-font-smoothing : none;*/
+	/*text-shadow: 0 1px 0 rgba(0,0,0,.15);*/
+}
+/*
+Global Component Heights
+-------------------------------------------
+*/
+input[type=text] {
+	min-height:28px;
+	display: inline-block;
+}
+input[type=checkbox].form-std{
+	margin:10px 0 11px 0;
+}
+textarea.ff-form-std {
+	display: inline-block;
+	height: 60px;
+}
+label.ff-form-std {
+	font-weight: normal;
+	margin: 8px 0 5px;
+	vertical-align: top;
+}
+select, textarea, input[type=text], .form-control {
+	height: 28px;
+	font-size:12px;
+	padding: 3px 5px;
+	margin:3px 0;
+}
+input[type=checkbox].ff-form-std{
+	margin-top: 8px;
+}
+input[type="radio"].ff-form-std {
+	margin: 6px 0 7px 0  !important;
+}
+input[type="checkbox"].ff-form-std {
+	margin: 10px 0 11px 0 !important;
+}
+.btn-sm {
+    margin:3px 0;
+}
+h3 {
+	font-size: 20px;
+	height: 20px;
+	line-height: 20px;
+}
+label.ff-form-std.noWidth{
+	width: auto;
+}
+/*
+Global Component Styles
+-------------------------------------------
+*/
+hr {
+	margin: 20px 0;
+	border-top: 1px solid #DDD;
+	border-bottom: 1px solid #FFF;
+}
+.displayNone{
+	display: none;
+}
+.rightText {
+	text-align: right;
+	padding-right: 20px;
+}
+.textAlignRight {
+    text-align: right;
+}
+.centerText {
+    text-align: center;
+}
+.strong {
+	font-weight: bold;
+}
+.sectionHeaderMargin {
+    margin-top: 30px !important;
+}
+.greyLink, .greyLink:focus, .greyLink:hover, .greyLink:active {
+    color:#999999;
+}
+.greyText{
+	color:#999999;
+}
+.defaultTextColor{
+	color: #333;
+}

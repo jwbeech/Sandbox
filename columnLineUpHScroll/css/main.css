@@ -1,4 +1,39 @@
-
+@charset "UTF-8";
+/*---------------------------------------------+
+| GLOBAL STYLES						           |
++---------------------------------------------*/
+/*
+Border Box
+-------------------------------------------
+*/
+/*This allows for widths and heights to be exact including margin, padding and border in the final calc*/
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* Firefox button and input outline fix */
+/*a:focus, a:active,
+button::-moz-focus-inner,
+input::-moz-focus-inner,
+textarea::-moz-focus-inner,
+select::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+	border: 0;
+	outline : 0;
+}*/
+textarea {
+	resize: none;
+}
+.modal-scrollable {
+    z-index: 99999;
+}
+html{
+    height: 100%;
+}
+body {
+    min-height: 100%;
+}
 /*
 Fonts
 -------------------------------------------
@@ -15,11 +50,11 @@ Fonts
 	font-weight: 600;
 	src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(../fonts/opensansbold.woff) format('woff');
 }
-
-
+* { text-rendering: optimizeLegibility; }
+html.touch * { text-rendering: optimizeSpeed; }
 body {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Tahoma, sans-serif;
-    font-size: 12px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+	font-size: 12px;
 		/*font-smooth: never;
         -webkit-font-smoothing : none;*/
 }
@@ -111,4 +146,1400 @@ hr {
 }
 .defaultTextColor{
 	color: #333;
+}
+
+
+
+/*---------------------------------------------+
+| BOOTSTRAP OVERRIDES				           |
++---------------------------------------------*/
+.btn-sm {
+    padding: 4px 10px;
+}
+.dropdown-menu {
+	font-size: 13px;
+}
+.form-group {
+	margin-bottom: 0;
+}
+.form-control[readonly] {
+    background-color: #FFFFFF;
+}
+.ff-form-std .input-group-btn {
+    vertical-align: top;
+}
+.form-control[disabled],
+fieldset[disabled] .form-control {
+	background-color: #f1f1f1 !important;
+	-webkit-box-shadow: none;
+			box-shadow: none;
+}
+/* fix for alignment */
+.checkbox-inline input[type=checkbox]{
+	margin-top: 2px;
+}
+/* Allows the color change on row rollover */
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: transparent;
+}
+.table-striped > tbody > tr:nth-child(2n+1) {
+    background-color: #F9F9F9;
+}
+.form-control:-ms-input-placeholder {
+    color: #999999 !important;
+}
+.form-control::-webkit-input-placeholder {
+    color: #999999 !important;
+}
+.form-control::-moz-placeholder {
+    color: #999999 !important;
+    opacity: 1;
+}
+
+a.btn:active, a.btn.active{
+	box-shadow: none;
+}
+
+/* Fix for h3 styles */
+h3.popover-title{
+	display: block;
+	height: auto;
+}
+
+/* drop down menu extension */
+div.dropdown-menu.div-menu{
+	padding: 10px;
+	background-color: #f9f9f9;
+}
+
+div.dropdown-menu.div-menu .title{}
+
+div.dropdown-menu.div-menu .title h4{
+	font-size: 13px;
+	font-weight: bold;
+	margin: 4px 0 0 0;
+	float: left;
+}
+
+div.dropdown-menu.div-menu .title button{
+	margin: 0;
+	float: right;
+}
+
+div.dropdown-menu.div-menu .slider{
+	margin: 20px 8px;
+}
+div.dropdown-menu.div-menu hr{
+	margin: 10px 0;
+}
+div.dropdown-menu.div-menu .form-group{
+	margin: 10px 0;
+}
+.tooltip.in {
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+.input-group-sm > .form-control, .input-group-sm > .input-group-addon, .input-group-sm > .input-group-btn > .btn {
+	height: 28px;
+}
+.input-group-sm > .input-group-btn > .btn {
+	padding: 4px 10px;
+}
+
+
+/*---------------------------------------------+
+| JQUERY UI OVERRIDES				           |
++---------------------------------------------*/
+.ui-slider{
+	background-color: #ffffff;
+	background-image: -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f9f9f9));
+	background-image: -webkit-linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-image: -o-linear-gradient(top, #f5f5f5, #f9f9f9);
+	background-image: linear-gradient(to bottom, #f5f5f5, #f9f9f9);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#fff9f9f9', GradientType=0);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+
+	/*-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;*/
+}
+
+.ui-slider .ui-slider-handle{
+	background-color: #0e90d2;
+	background-image: -moz-linear-gradient(top, #149bdf, #0480be);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));
+	background-image: -webkit-linear-gradient(top, #149bdf, #0480be);
+	background-image: -o-linear-gradient(top, #149bdf, #0480be);
+	background-image: linear-gradient(to bottom, #149bdf, #0480be);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff149bdf', endColorstr='#ff0480be', GradientType=0);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+	opacity: 0.8;
+	border: 0px solid transparent;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+/*--------------------------------------------+
+| SELECT2 OVERRIDES				              |
++---------------------------------------------*/
+.select2-container.form-control.ff-form-std {
+    box-shadow: none;
+}
+.select2-container.form-control.ff-form-std span.select2-arrow {
+    display:none;
+}
+.select2-choice {
+    margin:0;
+    height: 28px !important;
+    font-size:12px;
+    padding: 3px 5px;
+}
+.select2-container.form-control.ff-form-std {
+	margin:3px 0;
+}
+/* special case for input group */
+.input-group .select2-container.form-control.ff-form-std{
+	margin:3px 0 0 0;
+}
+
+div li.select2-search-field
+{
+    height: 28px !important;
+}
+div.select2-container.form-control.ff-form-std span.select2-chosen,
+div.select2-container.select2-container-multi.form-control ul li input {
+    padding: 4px 5px !important;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Tahoma, sans-serif !important;
+    font-size: 12px !important;
+}
+div.select2-container.select2-container-multi.form-control ul li input{
+    height:28px !important;
+}
+.select2-container-multi .select2-choices .select2-search-choice {
+    margin-top: 4px !important;
+}
+.select2-drop-mask {
+    height: 1px !important;
+    min-height: 1px !important;
+    min-width: 1px !important;
+    width: 1px !important;
+}
+.select2-container .select2-choice abbr {
+	right: 6px;
+}
+.select2InputGroupButton {
+    padding-top: 3px;
+}
+.select2InputGroupButton button {
+    height: 28px !important;
+    padding: 0 10px !important;
+}
+.input-group.input-group-sm.select2-bootstrap-append > .form-control.ff-form-std {
+    height: auto;
+}
+
+
+/*---------------------------------------------+
+| REUSEABLE 								   |
++---------------------------------------------*/
+.animation1s{
+	-webkit-animation-duration: 1s !important;
+	-moz-animation-duration: 1s !important;
+	-o-animation-duration: 1s !important;
+}
+.animation500ms{
+	-webkit-animation-duration: 500ms !important;
+	-moz-animation-duration: 500ms !important;
+	-o-animation-duration: 500ms !important;
+}
+.animation300ms{
+	-webkit-animation-duration: 300ms !important;
+	-moz-animation-duration: 300ms !important;
+	-o-animation-duration: 300ms !important;
+}
+.animation200ms{
+    -webkit-animation-duration: 200ms !important;
+    -moz-animation-duration: 200ms !important;
+    -o-animation-duration: 200ms !important;
+}
+.animation150ms{
+    -webkit-animation-duration: 150ms !important;
+    -moz-animation-duration: 150ms !important;
+    -o-animation-duration: 150ms !important;
+}
+
+.space5 { margin: 5px 0; }
+.space10 { margin: 10px 0; }
+.space15 { margin: 15px 0; }
+.space20 { margin: 20px 0; }
+.space30 { margin: 30px 0; }
+
+.spaceAfter5 { margin-bottom: 5px; }
+.spaceAfter10 { margin-bottom: 10px; }
+.spaceAfter15 { margin-bottom: 15px; }
+.spaceAfter20 { margin-bottom: 20px; }
+.spaceAfter30 { margin-bottom: 30px; }
+
+.spaceBefore5 { margin-top: 5px; }
+.spaceBefore10 { margin-top: 10px; }
+.spaceBefore15 { margin-top: 15px; }
+.spaceBefore20 { margin-top: 20px; }
+.spaceBefore30 { margin-top: 30px; }
+
+.spaceRight5 { margin-right: 5px; }
+.spaceRight10 { margin-right: 10px; }
+.spaceRight15 { margin-right: 15px; }
+.spaceRight20 { margin-right: 20px; }
+.spaceRight30 { margin-right: 30px; }
+
+.spaceLeft5 { margin-left: 5px; }
+.spaceLeft10 { margin-left: 10px; }
+.spaceLeft15 { margin-left: 15px; }
+.spaceLeft20 { margin-left: 20px; }
+.spaceLeft30 { margin-left: 30px; }
+
+.wordSpace5 { width: 5px; display: inline-block; }
+.wordSpace10 { width: 10px; display: inline-block; }
+.wordSpace15 { width: 15px; display: inline-block; }
+
+.red { color: #ff0000; }
+
+.callout{
+	padding: 5px 10px;
+	border-left: 3px solid #2aa0c3;
+	background: #ffffff;
+}
+.callout h4{
+	color: #2aa0c3;
+}
+
+.rightButtonContainer{}
+.rightButtonContainer *{
+	float: right;
+	margin-left: 5px;
+}
+.borderBottomLeftRadius0 {
+    border-bottom-left-radius: 0 !important;
+}
+.borderBottomLeftRadiusNormal {
+    border-bottom-left-radius: 4px !important;
+}
+.borderBottomRightRadius0 {
+    border-bottom-right-radius: 0 !important;
+}
+.borderBottomLeftRadiusNormal {
+    border-bottom-right-radius: 4px !important;
+}
+
+/*---------------------------------------------+
+| VALIDATION AND FORMS				           |
++---------------------------------------------*/
+label.error {
+	color: #ff0000;
+	float: right;
+	margin: 1px 0 5px;
+	padding: 0;
+	text-align: right;
+	width: 100% !important;
+}
+label.error.valid {
+	display: none !important;
+}
+.form-control.error {
+	border-color: #ff0000;
+	outline: 0 none;
+}
+.error.select2-input {
+    border-color: #ff0000;
+    outline: 0 none;
+}
+.select2-container.error {
+    border-color: red;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 3px rgba(255, 0, 0, 0.4);
+    outline: 0 none;
+    border: 1px solid #ff0000 !important;
+    border-radius: 4px;
+}
+.form-control.error:focus {
+	border-color: red;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 3px rgba(255, 0, 0, 0.4);
+	outline: 0 none;
+}
+.form-control:focus {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(102, 175, 233, 0.6);
+}
+.form-control.readOnlyLabel {
+	display: inline-block !important;
+	width:49.3%;
+	height:auto;
+	min-height: 28px;
+	padding: 5px 5px;
+	background-color: #f9f9f9;
+	-webkit-box-shadow: none;
+			box-shadow: none;
+}
+.form-control.readOnlyLabelTextArea {
+	min-height: 56px;
+}
+.form-control.ff-form-full{
+	width:100%;
+}
+h3 {
+	display: inline-block;
+	margin: 6px 0 15px;
+}
+.h3Holder {}
+.h3Holder h3{
+	float: left;
+}
+.horizontalRadioButtonGroup {
+    width:24.7%;
+    font-weight: normal;
+    vertical-align: text-top;
+    padding-top:3px;
+}
+.horizontalRadioButtonGroupRightPadding {
+    padding-right: 5px;
+}
+input.form-control.buttonInput,
+input.form-control.buttonDropDownInput {
+    cursor: pointer;
+    margin: 3px 0 -1px;
+}
+input.form-control.inputWithButton {
+	margin: 3px 0 -1px;
+}
+button.buttonInput {
+    margin: 3px 0 -1px;
+}
+
+
+/*---------------------------------------------+
+| RESPONSIVE 						           |
++---------------------------------------------*/
+/*
+Desktop and Landscape Tablet
+-------------------------------------------
+*/
+@media (min-width: 973px) {
+	#login {
+		width: 100%; max-width: 350px; margin: 0 auto;
+	}
+	#appHeaderBar .holder, #appTitleBar .holder, #appBody .appBodyHolder {
+		width: 100%; min-width: 971px; max-width: 1200px; min-height: 30px;
+	}
+	label.ff-form-std,
+	select.ff-form-std,
+	input[type=text].ff-form-std,
+	input[type=password].ff-form-std,
+    div.ff-form-std,
+	textarea.ff-form-std
+	{
+		display: inline-block !important; width: 49.3%; /* TODO: Find a fix for 50% */
+	}
+	label.ff-form-full,
+	select.ff-form-full,
+	input[type=text].ff-form-full,
+	input[type=password].ff-form-full,
+	textarea.ff-form-full
+	{
+		width: 100%;
+	}
+	.modalFullWidth {
+		width: 100%; min-width: 971px; max-width: 1146px; min-height: 30px;
+	}
+}
+/*
+Landscape tablet
+-------------------------------------------
+*/
+@media (max-width: 972px) {
+	body {
+		padding: 0; /*Bootstrap sets a 20px padding at this size*/
+	}
+	body, input, textarea, label, select {
+		font-size: 16px !important; /* Fix for auto zoom on iOS */
+	}
+	#login {
+		width: 100%; min-width: 222px; max-width: 350px; margin: 0 auto;
+	}
+	label.ff-form-std,
+	select.ff-form-std,
+	input[type=text].ff-form-std,
+	input[type=password].ff-form-std,
+    div.ff-form-std,
+	textarea.ff-form-std
+	{
+		display: block; width: 100%;
+	}
+	#appHeaderBar .holder, #appTitleBar .holder, #appBody .appBodyHolder {
+		width: 100%; min-width: 525px; max-width: 970px; min-height: 30px;
+	}
+	#appHeaderBar .content, #appTitleBar .content, #appBody .appBodyContent {
+		margin: 0 10px;
+	}
+}
+/*
+Landscape phone to portrait tablet
+-------------------------------------------
+*/
+@media (max-width: 768px) {
+	table {
+		table-layout: fixed;
+	}
+	#appHeaderBar .holder, #appTitleBar .holder, #appBody .appBodyHolder {
+		width: 100%; min-width: 222px; max-width: 450px; min-height: 30px;
+	}
+	.dataTables_filter input[type=text], .dataTables_filter label {
+		width: 100%;
+	}
+	#appHeaderBar .navbar-nav {
+		margin:0;
+	}
+	.col-12 {
+		padding: 0;
+	}
+}
+/*
+Portrait phones and down
+--------------------------------------------
+*/
+@media (max-width: 480px) {
+	#appHeaderBar .holder, #appTitleBar .holder, #appBody .appBodyHolder {
+		width: 100%; min-width: 222px; max-width: 480px; min-height: 30px;
+	}
+	.dataTables_filter input[type=text], .dataTables_filter label {
+		width: 100%;
+	}
+}
+/*
+POTENTIAL SOLUTION TO TEXT OVERFLOW
+td
+{
+	max-width: 100px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}*/
+
+
+/*---------------------------------------------+
+| MODALS							           |
++---------------------------------------------*/
+.modal .modal-content .modal-header h2 {
+	margin: 0;
+	padding: 8px 0;
+	font-size: 25px;
+	line-height: 22.75px;
+	display:inline-block;
+}
+.modal .modal-content .modal-header .headerButtonHolder {
+	margin:5px 0 0;
+}
+.modal .modal-header {
+	margin:	0 20px;
+	padding: 16px 0 10px;
+	border: 0;
+}
+.modal .modal-header .close {
+	margin-top:	2px;
+}
+.modal .modal-content {
+	background-color: #f9f9f9;
+}
+.modal .modal-body {
+	padding: 15px 20px;
+}
+.modal .modal-footer {
+	margin:	0 20px;
+	padding: 17px 0 18px;
+	border: 0;
+}
+.modal .modal-content > hr {
+	margin: 0 20px;
+}
+.modal.error .modal-content h2, .modal.confirmation .modal-content h2 {
+	margin: 0;
+	padding: 8px 0;
+	font-size: 25px;
+	line-height: 32.75px;
+}
+.modal.error .modal-content, .modal.confirmation .modal-content {
+	width: 500px;
+}
+/*.modal .error .modal-content {
+	background-color: #F2DEDE;
+}
+.modal .confirmation .modal-content {
+	background-color: #fcf8e3;
+}*/
+.modal.error .modal-content img, .modal.confirmation .modal-content img {
+	float: left;
+	margin:	35px;
+}
+.modal.error .modal-content .modal-header, .modal.confirmation .modal-content .modal-header {
+	margin-left: 135px;
+	padding-top: 20px;
+}
+.modal.error .modal-content .modal-body, .modal.confirmation .modal-content .modal-body {
+	margin-left: 135px;
+	padding: 10px 30px 15px 0;
+	word-wrap: break-word;
+}
+.modal.error .modal-content .modal-footer, .modal.confirmation .modal-content .modal-footer {
+	margin-left: 135px;
+	text-align: left;
+}
+.modal-backdrop {
+	background-color: #FFFFFF;
+}
+
+/*SPINNER*/
+.modalSpinnerHolder {
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	margin: -50px 0 0 -50px;
+}
+.modalSpinnerHolder .modalSpinner {
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	background-color: #FFFFFF;
+	box-shadow: 0 0 5px #CCCCCC;
+	border-radius: 4px;
+}
+.modalSpinnerHolder .modalSpinner > img
+{
+	margin-top: 25px;
+}
+
+
+
+/*NEW MODAL FRAMEWORK OVERRIDES*/
+.modal {
+	top:auto !important;
+	bottom:auto !important;
+	left:auto !important;
+	right:auto !important;
+	width:auto !important;
+	position: static !important;
+	max-width: 1200px;
+	min-width: 600px;
+	padding:0 20px !important;
+	margin:67px auto !important;
+	background-color: transparent !important;
+	border:none!important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+.ff-modal{
+	display: block;
+	visibility: hidden;
+}
+
+
+
+/*---------------------------------------------+
+| HEADER									   |
++---------------------------------------------*/
+/*Holders*/
+#appHeaderBar .holder, #appTitleBar .holder, #appBody .appBodyHolder{
+	margin: 0 auto;
+}
+/*Contents*/
+#appHeaderBar .content, #appTitleBar .content, #appBody .appBodyContent {
+	margin: 0 20px;
+}
+/*
+App Header Bar
+-------------------------------------------
+*/
+#appHeaderBar {
+	background: #3b627f;
+	height: 67px;
+}
+#appHeaderBar hr {
+	margin: 5px;
+}
+#appHeaderBar .modal {
+	width: 260px;
+	margin-left: -130px;
+}
+#appHeaderBar .logo {
+	margin: 3px 0 0;
+}
+#appHeaderBar .btn i {
+	margin: 6px 10px 0;
+}
+/*--- User Nav Bar START ---*/
+#appHeaderBar .navbar {
+	display: inline-block;
+	margin: 11px 0 0 30px;
+	padding: 0;
+	background-color: #3b627f;
+}
+#appHeaderBar .navbar-inner {
+	background: #3b627f;
+	border: 0;
+	box-shadow: none;
+	padding: 0;
+	-webkit-box-shadow: none;
+}
+#appHeaderBar .navbar .nav .active > a {
+	background: #3b627f;
+	color: #efefef;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+    padding-right: 30px;
+}
+#appHeaderBar .navbar .nav > li > a {
+	color: #efefef;
+	background: #3b627f;
+	text-shadow: 0 1px 0 #333;
+	margin-right: -1px !important;
+}
+#appHeaderBar .navbar .nav > li > a.headerLink {
+    text-shadow: none !important;
+}
+#userMenu{
+	padding-right: 0px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+
+a.quickQuote{
+	width: 14px;
+	height: 28px;
+	float: right;
+	margin-top: 19px;
+	margin-right: 0px;
+	background: url("../images/header/quickQuote.png") 0 6px no-repeat;
+}
+a.quickQuote:hover{
+	background-position: -14px 6px;
+}
+.headerLink:hover {
+    color: #000000 !important;
+}
+.headerLink:hover .caret {
+	color: #000000 !important;
+    border-top-color: #000000 !important;
+    border-bottom-color: #000000 !important;
+}
+.notificationCount {
+    font-size: 13px;
+}
+#appHeaderBar .navbar .nav > li {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#appHeaderBar .btn-menu:hover {
+    color: #efefef;
+    background: #41536E !important;
+    margin-right: -1px !important;
+}
+
+#appHeaderBar .btn-menu {
+    display: inline-block;
+    background: -webkit-linear-gradient(#4C6081, #41536E) !important; /* For Safari */
+    background: -o-linear-gradient(#4C6081, #41536E) !important; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#4C6081, #41536E) !important; /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#4C6081, #41536E) !important; /* Standard syntax (must be last) */
+	padding: 2px 14px 3px 2px;
+    margin-top:     3px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.928571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid #314259;
+    border-radius: 0px;
+    box-shadow: 0.4px 0.5px 0.5px #888888;
+}
+
+#appHeaderBar .nav .caret {
+	border-top-color: #efefef;
+	border-bottom-color: #000;
+	margin-bottom: 2px;
+}
+#appHeaderBar .versionNumber {
+    color: #27323b;
+    display: block;
+    font-size: 10px;
+    text-align: center;
+	line-height: 9px;
+}
+/*--- User Nav Bar END ---*/
+/*
+App Title Bar
+-------------------------------------------
+*/
+#appTitleBar {
+	background: #f1f1f1;
+	height: 55px;
+	border-bottom: 1px solid #e5e5e5;
+}
+#appTitleBar h1 {
+	margin: 0;
+	padding-top: 15px;
+	font-size: 20px;
+    display: inline-block;
+}
+#appTitleBar #jobBagBtn {
+    float:right;
+    margin: 13px 20px 0 0;
+}
+#appTitleBar .jobBagIcon {
+    font-size: 15px;
+    margin-right: 10px;
+    top: 0;
+}
+/*
+App Body
+-------------------------------------------
+*/
+#appBody .appBodyContent {
+	padding-top: 6px;
+}
+
+
+/*---------------------------------------------+
+| LOGIN								           |
++---------------------------------------------*/
+#login {
+	padding-top: 20px;
+}
+#login label, #login select, #login input {
+	display: block;
+	width: 100% !important;
+}
+#login .btn {
+	margin-top: 5px;
+}
+#login .title {
+	margin: 2px 0 0;
+	float: left;
+}
+#login hr {
+	margin: 10px 0;
+}
+#login .content {
+	margin: 0 20px;
+}
+/*
+SHADOWS
+-------------------------------------------
+*/
+#login .topLeft 	{ background: url("../images/login/topLeft.png") left no-repeat; height: 64px; }
+#login .topRight 	{ background: url("../images/login/topRight.png") right no-repeat; height: 64px; }
+#login .top 		{ background: url("../images/login/headerFade.gif") repeat-x; }
+
+#login .midLeft 	{ background: url("../images/login/boxShadowLeft.gif") left repeat-y; background-color: #f9f9f9; }
+#login .midRight 	{ background: url("../images/login/boxShadowRight.gif") right repeat-y; }
+
+#login .botLeft 	{ background: url("../images/login/botLeft.png") left no-repeat; height: 64px; }
+#login .botRight 	{ background: url("../images/login/botRight.png") right no-repeat; height: 64px; }
+#login .bot 		{ background: url("../images/login/footerFade.gif") repeat-x; }
+
+
+/*---------------------------------------------+
+| DASHBOARD							           |
++---------------------------------------------*/
+#dashboard .widgetTitle {
+	display: block;
+	font-size: 14px;
+	margin: 20px 0 15px;
+}
+#dashboard .widget {
+	width: 49%;
+}
+#dashboard .widget.left {
+	float: left;
+}
+#dashboard .widget.right {
+	float: right;
+}
+#dashboard .divider {
+	width: 20px;
+}
+#dashboard .widget table td {
+	height: 23px;
+	padding: 3px 6px;
+}
+.dashboardTable tbody tr {
+    cursor: pointer;
+}
+
+
+
+/*---------------------------------------------+
+| INBOX								           |
++---------------------------------------------*/
+/*#inbox .btn {
+	margin-bottom: 10px;
+	display: block;
+}*/
+.loaderGif {
+	margin: 30px auto 0 auto;
+	display: none;
+}
+.inboxDataTable tr {
+	cursor: pointer;
+}
+#inboxHolder {
+	position: relative;
+}
+
+.inboxDataTable.ffDataTable td {
+    height: 36px !important;
+    padding: 8px 6px !important;
+	white-space:nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+.inboxSearchInput {
+    width:50%;
+    margin: 5px auto 10px;
+    position: relative;
+}
+.inboxSearchInput .spinner {
+    position: absolute;
+    left:-20px;
+    top:9px;
+    display: none;
+}
+.inboxSearchInput .inboxSearchIcon {
+    color: #b1b1b1;
+    cursor: pointer;
+    padding: 8px 10px;
+    position: absolute;
+    right: 22px;
+    z-index: 3;
+}
+.inboxSearchInput .inboxSearchIcon:hover {
+    color: #666666;
+}
+.inboxSearchInput .inboxSearchIcon:active {
+    color: #b1b1b1;
+}
+.inboxSearchInput .downBtn {
+    width: 23px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+}
+.inboxSearchInput .downBtn .caret {
+    position:absolute;
+    top: 13px;
+    left: 7px;
+}
+
+.inboxSearchInput button.btn.btn-sm.dropdown-toggle {
+    width:19px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.dropdown-menu.inboxAdvancedSearchHolder{
+    /*border: 1px solid rgba(217, 217, 217, 1);*/
+    border-color: #66AFE9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(102, 175, 233, 0.6);
+    display: block !important;
+
+    /*visibility: hidden;*/
+}
+.inboxAdvancedSearch {
+    border-top-left-radius:0;
+    border-top-right-radius:0;
+    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.176);
+    border: 1px solid #ccc;
+    border-top: 0 none;
+}
+.inboxAdvancedSearch div.searchHolder {
+    margin: 15px 20px;
+    width:540px;
+    overflow:hidden;
+    position: relative;
+    /*white-space:nowrap;*/
+}
+.inboxAdvancedSearch div.searchHolder .advancedSearchModal {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:url("../images/spinner_24.gif") no-repeat center 40%;
+    background-color:rgba(255,255,255,0.5);
+    display:none;
+}
+.inboxAdvancedSearch form input.ff-form-std,
+.inboxAdvancedSearch form div.ff-form-std
+{
+    width:69% !important;
+}
+.inboxAdvancedSearch .searchForm,
+.inboxAdvancedSearch .saveForm{
+    /*display:inline-block;*/
+    width:540px;
+}
+.inboxAdvancedSearch .saveForm {
+    /*margin-left: 20px;
+    vertical-align: top;*/
+    /*position: absolute;
+    top: 20px;*/
+    display: none;
+}
+
+.inboxAdvancedSearch form label {
+    width:30% !important;
+    font-size: 12px;
+}
+.inboxAdvancedSearch input[data-formatter=date].ff-form-std {
+    width: 31% ! important;
+}
+.inboxAdvancedSearch .toMiddleText
+{
+    display: inline-block;
+    text-align: center;
+    width: 6%;
+}
+.inboxAdvancedSearch div.buttonHolder {
+    margin-left: 29%;
+    margin-top:17px;
+}
+.inboxAdvancedSearch div.buttonHolder .footerActionButton {
+    margin-left:7px;
+    float: left;
+}
+.inboxAdvancedSearch .saveSearchScreenBtn,
+.inboxAdvancedSearch .backToSearchBtn {
+    padding: 4px 0;
+}
+.inboxAdvancedSearch .saveSearchScreenBtn {
+    float: right;
+    margin-right: 2px;
+}
+
+
+
+
+
+
+/*---------------------------------------------+
+| WORKBOX							           |
++---------------------------------------------*/
+/*
+Structural
+-------------------------------------------
+*/
+.workbox {
+	position: relative;
+}
+.workboxContent {
+	margin: 0 20px;
+	min-height: 500px;
+}
+.workboxContentWrapper {
+	border-left: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	background-color: #f9f9f9;
+	padding-bottom: 20px;
+}
+
+.workboxContentWrapper .tab-pane{
+	overflow: hidden;
+	min-height: 500px;
+}
+
+.subTabNavMainHolder {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.subTabNavContentWrapper{
+    padding: 20px 20px;
+}
+
+.tabPreloader{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -25px 0 0 -25px;
+}
+
+.headerButtonHolder {
+	float:right;
+	margin: 20px 0 0 0;
+}
+.footerButtonHolder {
+	float:right;
+	position: relative;
+}
+.buttonLoader{
+	margin-right: 10px;
+}
+/*Titles*/
+.workboxContent > h2 {
+	font-size: 25px;
+	line-height: 25px;
+	display: inline-block;
+	margin: 23px 0 0;
+}
+.headerClaimHolder{
+	float:right;
+}
+.headerClaimHolder p{
+	padding: 32px 10px 0 0;
+	display: inline-block;
+}
+
+#appHeaderBar .navbar.headerUserMenu{
+	float: right;
+	margin-top: 7px;
+	margin-left: 0px;
+}
+
+#appHeaderBar .mailIcon{
+	margin-top: 20px;
+	float: right;
+}
+#appHeaderBar .mailIcon a.btn-sm {
+    color: #efefef;
+	border: none;
+	margin: 0;
+}
+#appHeaderBar .mailIcon a:hover {
+    color: #000;
+}
+
+/*
+Process Tab Nav
+-------------------------------------------
+*/
+.workbox .nav {
+	margin-bottom: 0;
+}
+.workbox .nav-tabs > .active > a,
+.workbox .nav-tabs > .active > a:hover,
+.workbox .nav-tabs > .active > a:focus {
+	background-color: #f9f9f9;
+}
+/*
+Help
+-------------------------------------------
+*/
+.workbox .helpField {
+	color: #999999;
+	display: block;
+	font-size: 0.9em;
+	text-align: right;
+	margin: 0 0 1px;
+}
+.workbox .helpTitle {
+	color: #999999;
+	display: block;
+	font-size: 0.9em;
+	text-align: center;
+	margin: 10px 0 0;
+}
+.workbox .helpFooter {
+	color: #999999;
+	display: block;
+	font-size: 0.9em;
+	text-align: center;
+	margin: 0 0 10px;
+}
+
+
+.modulesWrapper{
+	position: relative;
+}
+
+/*
+Sub Objects & Modules
+-------------------------------------------
+*/
+.subObjButtons {}
+.subObjButtons button,
+.subObjButtons a{
+	float: right;
+}
+.subObjButtons.buttonOnly button,
+.subObjButtons.buttonOnly a {
+    margin-bottom: 8px;
+}
+.btn-table{
+	padding: 0px 5px;
+	font-size: 12px;
+	line-height: 1;
+	border-radius: 0px;
+}
+.subModuleHolder{
+	min-height: 174px;
+}
+.modulePreloader{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background: url("../images/workbox/tabBgTransparent.png") repeat;
+	width: 100%;
+	height: 100%;
+}
+.modulePreloader img{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -12px 0 0 8px;
+}
+.moduleSeparator{
+	height: 30px;
+	clear: both;
+}
+
+/*
+All Tables
+-------------------------------------------
+*/
+/* Selectable rows */
+.selectingRows {}
+.selectingRows tr { cursor: pointer;}
+
+
+/*
+Data Tables
+-------------------------------------------
+*/
+.ffDataTable {
+	width: 100%;
+	margin: 0;
+	background-color: #FFFFFF;
+}
+
+/*
+Important to reset the font family, the rendering of columns doesn't work
+*/
+.ffDataTable {
+    font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+    /*white-space: nowrap;*/
+}
+
+.ffDataTable button {
+	padding: 0 5px 0;
+}
+.ffDataTable tr.odd.selectedRadioRow td, .ffDataTable tr.even.selectedRadioRow td {
+    background-color: #eeeeee !important;
+}
+
+.dataTables_scrollHead {
+	background-color: #eeeeee;
+}
+/* important not to target the th directly as there are 2 when scrolling, the one is "supposed" to be hidden*/
+.dataTables_scrollHeadInner .ffDataTable th {
+	padding: 6px 6px !important;
+}
+/* important to correct the padding to the hidden header so the calculated column widths are the same */
+.dataTables_scrollBody .ffDataTable th {
+	padding-left: 6px !important;
+	padding-right: 6px !important;
+}
+.table.ffDataTable > tbody > tr > td {
+	padding: 3px 6px;
+	height: 25px;
+}
+/* select only the known link elements, not effecting inner uls */
+.ffDataTable td > a,
+.ffDataTable td > div > a{
+	padding: 0 8px 0 0 !important;
+}
+/*.dataTables_scroll th, .dataTables_scroll td, .dataTables_scroll th div.dataTables_sizing{
+	white-space: nowrap;
+}*/
+
+.dataTables_wrapper{
+	position: relative;
+}
+.dataTables_paginate.paging_bootstrap {
+	margin-top: 10px;
+}
+.dataTables_wrapper input[type=checkbox], .dataTables_wrapper input[type=radio] {
+    margin: 0 0 1px;
+    vertical-align: middle;
+}
+div.dataTables_paginate ul.pagination {
+    margin: 20px 0 0 !important;
+}
+.ffDataTable tbody .odd tr:hover, .ffDataTable tbody .even tr:hover, .ffDataTable tbody tr:hover
+{
+    background-color: #eeeeee !important;
+}
+
+.radioButtonTable.ffDataTable tbody .odd tr:hover, .radioButtonTable.ffDataTable tbody .even tr:hover, .radioButtonTable.ffDataTable tbody tr:hover
+{
+    cursor: pointer;
+}
+
+.ffDataTable.reorderingTable tbody .odd tr:hover, .ffDataTable.reorderingTable tbody .even tr:hover, .ffDataTable.reorderingTable tbody tr:hover
+{
+    cursor: move;
+}
+.reorderingTable thead tr th.sorting_asc {
+	background: none;
+}
+.reorderingTable thead tr th.sorting_asc,
+.reorderingTable thead tr th.sorting_desc,
+.reorderingTable thead tr th.sorting {
+	cursor:default;
+}
+
+/* class to hide pagination */
+.dataTables_wrapper.hidePagination .dataTables_paginate{
+	display: none !important;
+}
+
+.emptyCell{
+	display: none;
+}
+
+.tableInfo{
+	border: 1px solid #fe7232;
+	background-color: #fec6ac;
+	padding: 5px;
+}
+
+/* Copied disabled state from bootstrap for the pagination */
+.dataTables_paginate a.disabled{
+	box-shadow: none;
+	cursor: not-allowed;
+	opacity: 0.65;
+	pointer-events: none;
+}
+
+/*
+File Input Component
+-------------------------------------------
+*/
+.ffFileInput_icon {
+	position: absolute;
+	z-index: 3;
+	left: 23px;
+	top: 11px;
+}
+.input-group .form-control.ffFileInput_label{
+	padding-left: 22px !important;
+	margin: 3px 0;
+}
+.ffFileInput_holder {
+	padding-right: 4px;
+}
+
+/*
+Sub Tab Navs
+-------------------------------------------
+*/
+body .subTabNav {
+	margin-top: 20px;
+}
+body .subTabNav .nav-pills > li {
+	float:none;
+	display:inline-block;
+	*display:inline; /* ie7 fix */
+	zoom:1; /* hasLayout ie7 trigger */
+}
+body .subTabNav .nav-pills > li > a {
+	padding: 5px 10px;
+	margin-bottom: 5px;
+}
+body .subTabNav .nav-pills {
+	text-align:center;
+	border-bottom: 1px solid #dddddd;
+}
+
+
+
+/*---------------------------------------------+
+| CLIENT SERVICING							   |
++---------------------------------------------*/
+.clientSearchHolder.searchHolder .searchFields input,
+.clientSearchHolder.searchHolder .searchFields select,
+.clientSearchHolder.searchHolder .searchFields label,
+.clientSearchHolder.searchHolder .searchFields .ff-form-std {
+	width: 100% !important;
+}
+
+.clientSearchHolder .searchDivider{
+	margin: 10px 0;
+}
+
+.clientSearchHolder .modal-content{
+	padding-bottom: 0px;
+}
+.clientSearchHolder .searchButtons button{
+	margin-right: 10px;
+}
+
+/*.clientSearchHolder .searchResults{
+	padding-top: 10px;
+}*/
+
+.clientSearchHolder .newClientBtn{
+	float: right;
+	margin: 0 !important;
+}
+
+.clientSearchModal .newLoanBtn {
+	margin: 0 0 12px 30px;
+}
+
+
+/*---------------------------------------------+
+| UTILITIES							           |
++---------------------------------------------*/
+.noWrap {
+	white-space:nowrap;
+}
+.removeMargin {
+	margin: 0 !important;
+}
+.codeOutput {
+	background-color: #F5F5F5;
+	border: 1px solid #CCCCCC;
+	border-radius: 4px;
+	color: #333333;
+	font-size: 13px;
+	overflow: auto;
+	line-height: 1.42857;
+	margin: 0 0 10px;
+	padding: 9.5px;
+	font-family: Consolas,"Courier New",monospace;
+}
+.dialogCodeOutput{
+	height: 200px;
+	/*word-wrap: normal;*/
+	white-space: nowrap;
+	margin-top: 10px
+}
+.clear{
+	line-height: 1px;
+	font-size: 1px;
+	height: 1px;
+	clear: both;
+}
+.inlineForm {
+    display: inline !important;
 }

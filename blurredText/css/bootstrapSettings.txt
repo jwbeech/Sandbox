@@ -1,0 +1,3 @@
+FONT: "Helvetica Neue", Helvetica, Tahoma, sans-serif
+GUTTER WIDTH: 33px
+baseFont size: 13px;

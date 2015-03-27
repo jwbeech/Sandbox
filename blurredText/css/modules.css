@@ -56,6 +56,12 @@
 	margin: -12px 0 0 8px;
 }
 
+.form-control.readOnlyLabel.messageArea{
+    width: 100%;
+    height: 200px;
+    overflow-y: auto;
+}
+
 /*---------------------------------------------+
 | SUBMISSIONS						           |
 +---------------------------------------------*/
@@ -238,6 +244,7 @@ a.matrixCellInvalid:hover {
 	width: 260px;
 }
 
+.checklistRow .lineControls .scan,
 .checklistRow .lineControls .browse,
 .checklistRow .lineControls .uploadWaiting,
 .checklistRow .lineControls .reuploadView,
@@ -309,7 +316,7 @@ a.matrixCellInvalid:hover {
 	float: right;
 	padding: 24px 0 0 0;
 }
-.checklistRow .lineControls .hideReupload .reuploadLink,
+.checklistRow .lineControls .hideReupload .reuploadLink .rescanLink,
 .checklistRow .lineControls .hideReupload .divider{
 	display: none;
 }
@@ -424,11 +431,6 @@ label.modulePermissionCheck input{
 .starHolder{
 	cursor: pointer;
 }
-.form-control.readOnlyLabel.messageArea{
-	width: 100%;
-	height: 200px;
-	overflow-y: auto;
-}
 .unreadRow{
 	font-weight: bold;
 }
@@ -536,6 +538,6 @@ tr.selectedAuditRow td a{
 /*---------------------------------------------+
 | Notification							       |
 +---------------------------------------------*/
-textarea.form-control.notificationSendMessage{
+.form-control.notificationSendMessage{
 	height: 150px;
 }

@@ -13,15 +13,14 @@ Border Box
 	box-sizing: border-box;
 }
 /* Firefox button and input outline fix */
-/*a:focus, a:active,
+a, a:focus, a:active, a:visited, a:hover,
 button::-moz-focus-inner,
 input::-moz-focus-inner,
 textarea::-moz-focus-inner,
 select::-moz-focus-inner,
 input[type="file"] > input[type="button"]::-moz-focus-inner {
-	border: 0;
-	outline : 0;
-}*/
+	outline : none !important;
+}
 textarea {
 	resize: none;
 }
@@ -34,35 +33,63 @@ html{
 body {
     min-height: 100%;
 }
+
+
+/*
+Vertically Center
+-------------------------------------------
+*/
+/*
+https://css-tricks.com/centering-in-the-unknown
+/*
+/* This parent can be any width and height */
+.verticalCenterBlock {
+    text-align: center;
+    /* May want to do this if there is risk the container may be narrower than the element inside */
+    white-space: nowrap;
+}
+
+/* The ghost, nudged to maintain perfect centering */
+.verticalCenterBlock:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+/* The element to be centered, can also be of any width and height */
+.verticallyCentered {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 /*
 Fonts
 -------------------------------------------
 */
-@font-face {
-	font-family: 'Open Sans';
-	font-style: normal;
-	font-weight: 400;
-	src: local('Open Sans'), local('OpenSans'), url(../fonts/opensans.woff) format('woff');
-}
-@font-face {
-	font-family: 'Open Sans';
-	font-style: normal;
-	font-weight: 600;
-	src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(../fonts/opensansbold.woff) format('woff');
-}
-* { text-rendering: optimizeLegibility; }
-html.touch * { text-rendering: optimizeSpeed; }
+/*
+Note:
+Dropped the custom font for body copy as there are rendering issues with the data table columns using a custom font
+*/
 body {
-	font-family: "Open Sans", "Helvetica Neue", Helvetica, Tahoma, sans-serif;
-	font-size: 12px;
-		/*font-smooth: never;
-        -webkit-font-smoothing : none;*/
+	font-family:Arial, Tahoma, sans-serif;
+    font-size: 12px;
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(../fonts/opensans.woff) format('woff');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(../fonts/opensansbold.woff) format('woff');
 }
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
-	font-family: "Open Sans", "Helvetica Neue", Helvetica, Tahoma, sans-serif;
-	/*font-smooth: never;
-	-webkit-font-smoothing : none;*/
-	/*text-shadow: 0 1px 0 rgba(0,0,0,.15);*/
+	font-family:"Open Sans", Arial, Tahoma, sans-serif;
 }
 /*
 Global Component Heights
@@ -87,8 +114,9 @@ label.ff-form-std {
 select, textarea, input[type=text], .form-control {
 	height: 28px;
 	font-size:12px;
-	padding: 3px 5px;
+	padding: 6px 5px 4px;
 	margin:3px 0;
+    
 }
 input[type=checkbox].ff-form-std{
 	margin-top: 8px;
@@ -247,6 +275,11 @@ div.dropdown-menu.div-menu .form-group{
 	padding: 4px 10px;
 }
 
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus
+{
+    border-color: transparent;
+}
+
 
 /*---------------------------------------------+
 | JQUERY UI OVERRIDES				           |
@@ -318,7 +351,7 @@ div li.select2-search-field
 div.select2-container.form-control.ff-form-std span.select2-chosen,
 div.select2-container.select2-container-multi.form-control ul li input {
     padding: 4px 5px !important;
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Tahoma, sans-serif !important;
+    font-family:Arial, Tahoma, sans-serif !important;
     font-size: 12px !important;
 }
 div.select2-container.select2-container-multi.form-control ul li input{
@@ -667,13 +700,13 @@ td
 .modal .modal-content > hr {
 	margin: 0 20px;
 }
-.modal.error .modal-content h2, .modal.confirmation .modal-content h2 {
+.modal.error .modal-content h2, .modal.imageModal .modal-content h2 {
 	margin: 0;
 	padding: 8px 0;
 	font-size: 25px;
 	line-height: 32.75px;
 }
-.modal.error .modal-content, .modal.confirmation .modal-content {
+.modal.error .modal-content, .modal.imageModal .modal-content {
 	width: 500px;
 }
 /*.modal .error .modal-content {
@@ -682,20 +715,20 @@ td
 .modal .confirmation .modal-content {
 	background-color: #fcf8e3;
 }*/
-.modal.error .modal-content img, .modal.confirmation .modal-content img {
+.modal.error .modal-content img, .modal.imageModal .modal-content img {
 	float: left;
 	margin:	35px;
 }
-.modal.error .modal-content .modal-header, .modal.confirmation .modal-content .modal-header {
+.modal.error .modal-content .modal-header, .modal.imageModal .modal-content .modal-header {
 	margin-left: 135px;
 	padding-top: 20px;
 }
-.modal.error .modal-content .modal-body, .modal.confirmation .modal-content .modal-body {
+.modal.error .modal-content .modal-body, .modal.imageModal .modal-content .modal-body {
 	margin-left: 135px;
 	padding: 10px 30px 15px 0;
 	word-wrap: break-word;
 }
-.modal.error .modal-content .modal-footer, .modal.confirmation .modal-content .modal-footer {
+.modal.error .modal-content .modal-footer, .modal.imageModal .modal-content .modal-footer {
 	margin-left: 135px;
 	text-align: left;
 }
@@ -767,7 +800,7 @@ App Header Bar
 */
 #appHeaderBar {
 	background: #3b627f;
-	height: 67px;
+	height: 63px;
 }
 #appHeaderBar hr {
 	margin: 5px;
@@ -777,17 +810,29 @@ App Header Bar
 	margin-left: -130px;
 }
 #appHeaderBar .logo {
-	margin: 6px 0 0;
+	margin: 20px 0 0 15px;
+}
+#appHeaderBar .btn i.homeIcon{
+    margin: 6px 2px 0 0;
 }
 #appHeaderBar .btn i {
-	margin: 6px 10px 0;
+    margin: 6px 10px 0 0;
 }
 /*--- User Nav Bar START ---*/
 #appHeaderBar .navbar {
 	display: inline-block;
-	margin: 11px 0 0 30px;
+	height: 63px;
 	padding: 0;
 	background-color: #3b627f;
+    margin-bottom: 0;
+}
+#appHeaderBar .navbar.mainMenu {
+    margin-left: -16px;
+}
+#appHeaderBar .navbar .nav.navbar-nav,
+#appHeaderBar .navbar .nav.navbar-nav li.mainMenuItem,
+#appHeaderBar .navbar .nav.navbar-nav li.mainMenuItem a{
+    height: 100%;
 }
 #appHeaderBar .navbar-inner {
 	background: #3b627f;
@@ -807,27 +852,10 @@ App Header Bar
 	color: #efefef;
 	background: #3b627f;
 	text-shadow: 0 1px 0 #333;
-	margin-right: -1px !important;
+	/*margin-right: -1px !important;*/
 }
 #appHeaderBar .navbar .nav > li > a.headerLink {
     text-shadow: none !important;
-}
-#userMenu{
-	padding-right: 0px;
-	padding-bottom: 5px;
-	padding-left: 10px;
-}
-
-a.quickQuote{
-	width: 14px;
-	height: 28px;
-	float: right;
-	margin-top: 19px;
-	margin-right: 0px;
-	background: url("../images/header/quickQuote.png") 0 6px no-repeat;
-}
-a.quickQuote:hover{
-	background-position: -14px 6px;
 }
 .headerLink:hover {
     color: #000000 !important;
@@ -845,34 +873,52 @@ a.quickQuote:hover{
     margin: 0 !important;
 }
 
-#appHeaderBar .btn-menu:hover {
-    color: #efefef;
-    background: #41536E !important;
-    margin-right: -1px !important;
+#appHeaderBar a.btn-menu:hover {
+    color: #003333 !important;
+    background: #426883 !important;
+    /*margin-right: -1px !important;*/
+    text-shadow: none !important;
+}
+#appHeaderBar a.btn-menu:hover .caret {
+    border-top-color: #003333 !important;
+    border-bottom-color: #003333 !important;
+}
+#appHeaderBar .headerUserMenu a.btn.btn-menu {
+    font-size: 12px;
+    padding: 17px 6px 0 6px;
+}
+#appHeaderBar .headerUserMenu a.btn.btn-menu:hover {
+    background: #3b627f !important;
+}
+#appHeaderBar .headerUserMenu .navbar .nav.navbar-nav li.menuDivider {
+    margin-left: 10px !important;
 }
 
-#appHeaderBar .btn-menu {
+
+#appHeaderBar .btn.btn-menu {
     display: inline-block;
-    background: -webkit-linear-gradient(#4C6081, #41536E) !important; /* For Safari */
-    background: -o-linear-gradient(#4C6081, #41536E) !important; /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#4C6081, #41536E) !important; /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#4C6081, #41536E) !important; /* Standard syntax (must be last) */
-	padding: 2px 14px 3px 2px;
-    margin-top:     3px;
+	padding: 14px 14px 0 14px;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: normal;
     line-height: 1.928571429;
-    text-align: center;
     white-space: nowrap;
     vertical-align: middle;
     cursor: pointer;
     background-image: none;
-    border: 1px solid #314259;
-    border-radius: 0px;
-    box-shadow: 0.4px 0.5px 0.5px #888888;
+    border-radius: 0;
 }
-
+#appHeaderBar a.btn.btn-menu i.glyphicon {
+    font-size: 14px;
+}
+#appHeaderBar .navbar .nav.navbar-nav li.menuDivider {
+    height: 35px;
+    width: 1px;
+    margin-top: 13px !important;
+    margin-left: 1px !important;
+    background-color: #355872;
+    display: inline-block;
+}
 #appHeaderBar .nav .caret {
 	border-top-color: #efefef;
 	border-bottom-color: #000;
@@ -883,6 +929,7 @@ a.quickQuote:hover{
     display: block;
     font-size: 10px;
     text-align: center;
+	line-height: 9px;
 }
 /*--- User Nav Bar END ---*/
 /*
@@ -1109,7 +1156,7 @@ SHADOWS
     font-size: 12px;
 }
 .inboxAdvancedSearch input[data-formatter=date].ff-form-std {
-    width: 31% ! important;
+    width: 30.7% ! important;
 }
 .inboxAdvancedSearch .toMiddleText
 {
@@ -1209,8 +1256,7 @@ Structural
 
 #appHeaderBar .navbar.headerUserMenu{
 	float: right;
-	margin-top: 7px;
-	margin-left: 0px;
+    border: none;
 }
 
 #appHeaderBar .mailIcon{
@@ -1312,6 +1358,15 @@ Sub Objects & Modules
 }
 
 /*
+All Tables
+-------------------------------------------
+*/
+/* Selectable rows */
+.selectingRows {}
+.selectingRows tr { cursor: pointer;}
+
+
+/*
 Data Tables
 -------------------------------------------
 */
@@ -1320,16 +1375,14 @@ Data Tables
 	margin: 0;
 	background-color: #FFFFFF;
 }
-.selectingRows {}
-.selectingRows tr { cursor: pointer;}
+
+.ffDataTable th{
+    white-space: nowrap;
+}
+
 .ffDataTable button {
 	padding: 0 5px 0;
 }
-/* sub objects style */
-/*.ffDataTable .headerRow th {
-	padding: 4px 6px;
-	background-color: #eeeeee !important;
-}*/
 .ffDataTable tr.odd.selectedRadioRow td, .ffDataTable tr.even.selectedRadioRow td {
     background-color: #eeeeee !important;
 }
@@ -1436,6 +1489,29 @@ File Input Component
 	padding-right: 4px;
 }
 
+
+/*
+List Checkbox Component
+-------------------------------------------
+*/
+.listCheckboxContainer {
+    height: 94px !important;
+    overflow-y: auto;
+}
+.listCheckboxContainer label {
+    display: block;
+    font-weight: normal;
+}
+.listCheckboxContainer input {
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -3px;
+    *overflow: hidden;
+}
+
+
 /*
 Sub Tab Navs
 -------------------------------------------
@@ -1456,6 +1532,30 @@ body .subTabNav .nav-pills > li > a {
 body .subTabNav .nav-pills {
 	text-align:center;
 	border-bottom: 1px solid #dddddd;
+}
+
+
+/*
+Viewer JS
+-------------------------------------------
+*/
+#viewerJSHolder {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index:100000;
+}
+#viewerJSiFrame {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:auto;
 }
 
 
@@ -1492,6 +1592,17 @@ body .subTabNav .nav-pills {
 
 .clientSearchModal .newLoanBtn {
 	margin: 0 0 12px 30px;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size:11px;
+    color:#cccccc;
+    z-index: 200000;
+    background-color: #FFFFFF;
 }
 
 
@@ -1531,3 +1642,14 @@ body .subTabNav .nav-pills {
 .inlineForm {
     display: inline !important;
 }
+
+
+
+.extra {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
